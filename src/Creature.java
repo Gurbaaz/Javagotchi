@@ -31,7 +31,11 @@ public void sleep()
     happiness-=5;
     fullness-=5;
     if (energy>15){
-        energy=15;}
+        energy=15;}if(happiness==0||energy==0||fullness==0)
+    {
+        System.out.println("oh no"+ this.getName=" has died");
+
+    }
     System.out.println("yum, "+ this.getName()+ "really enjoyed that");
 
 
@@ -65,6 +69,12 @@ public void play()
 }
 public String checkStatus()
 {
+    if(happiness==0||energy==0||fullness==0)
+    {
+        System.out.println("oh no"+ this.getName()+ "  has died");
+        System.exit(0);
+
+    }
     String status= "";
     if(happiness<=6)
     {

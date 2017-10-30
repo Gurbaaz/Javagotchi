@@ -1,12 +1,13 @@
 /**
  * Created by k1763682 on 30/10/17.
  */
-public class Creature {
+public class Creature
+{
     int energy, happiness, fullness;
     String name;
-}
 
-public Creature()
+
+public Creature(String name)
 {
      energy = 15;
      fullness = 15;
@@ -19,7 +20,7 @@ public String getName()
    return name;
 }
 
-public void Sleep()
+public void sleep()
 {
     if(energy>=12)
     {
@@ -29,14 +30,14 @@ public void Sleep()
         energy+=8;
     happiness-=5;
     fullness-=5;
-    if (energy>15)
-        energy=15;
-    System.out.println("yum, "+ this.getname()+ "really enjoyed that");
+    if (energy>15){
+        energy=15;}
+    System.out.println("yum, "+ this.getName()+ "really enjoyed that");
 
 
 }
 
-public void Eat()
+public void eat()
 {
     if(fullness>=12)
     {
@@ -46,14 +47,13 @@ public void Eat()
     fullness+=8;
     happiness-=6;
     energy-=4;
-    if (fullness>15)
-        fullness=15;
-    Syatem.out.println("yum, "+ this.getname()+ "really enjoyed that");
+    if (fullness>15) fullness=15;
+    System.out.println("yum, "+ this.getName()+ "really enjoyed that");
 }
 
 
 
-public void Play()
+public void play()
 {
  happiness+=8;
  energy-=6;
@@ -63,7 +63,7 @@ public void Play()
 
 
 }
-public String CheckStatus()
+public String checkStatus()
 {
     String status= "";
     if(happiness<=6)
@@ -81,4 +81,5 @@ public String CheckStatus()
 
 
     return status;
+}
 }
